@@ -1,827 +1,825 @@
-From: <Saved by Blink>
-Snapshot-Content-Location: file:///C:/Users/Usuario/Downloads/index_1.html
-Subject: =?utf-8?Q?Capta=C3=A7=C3=A3o=20=E2=80=94=20NEXTRA?=
-Date: Sun, 29 Mar 2026 15:16:37 -0300
-MIME-Version: 1.0
-Content-Type: multipart/related;
-	type="text/html";
-	boundary="----MultipartBoundary--yiwwwhhZIFLPDcJwaHWPMCH98rMqOFOVAOIx97Pfj7----"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captação — NEXTRA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
 
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 
-------MultipartBoundary--yiwwwhhZIFLPDcJwaHWPMCH98rMqOFOVAOIx97Pfj7----
-Content-Type: text/html
-Content-ID: <frame-8A8A38A8FA514C5A11EC3A5A53AD86A9@mhtml.blink>
-Content-Transfer-Encoding: quoted-printable
-Content-Location: file:///C:/Users/Usuario/Downloads/index_1.html
+:root{
+  --bg:#0a0a0f;
+  --surface:#12121a;
+  --surface2:#1a1a26;
+  --border:#1e1e2e;
+  --red:#e02020;
+  --red2:#ff3333;
+  --blue:#1a6fff;
+  --blue2:#4d9fff;
+  --white:#f0f0f0;
+  --muted:#888;
+  --muted2:#555;
+}
 
-<!DOCTYPE html><html lang=3D"pt-BR"><head><meta http-equiv=3D"Content-Type"=
- content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
-xt/css" href=3D"cid:css-1f3c5096-0272-45d4-ae05-ef3014b602f5@mhtml.blink" /=
->
+html{scroll-behavior:smooth;}
 
-<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
-0">
-<title>Capta=C3=A7=C3=A3o =E2=80=94 NEXTRA</title>
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  position:relative;
+  overflow-x:hidden;
+}
 
+/* ── ONDAS DE FUNDO ── */
+/* Gerenciadas via canvas JS */
+
+/* ── LAYOUT ── */
+.page{
+  position:relative;
+  z-index:1;
+  max-width:680px;
+  margin:0 auto;
+  padding:0 20px 80px;
+}
+
+/* ── HEADER ── */
+.header{
+  padding:40px 0 0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-icon{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,var(--red),var(--blue));
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:900;color:#fff;
+  flex-shrink:0;
+}
+
+.logo-text{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#fff;
+}
+
+.logo-sub{
+  font-size:9px;
+  color:var(--muted2);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-top:1px;
+}
+
+/* ── HERO ── */
+.hero{
+  padding:52px 0 40px;
+}
+
+.hero-tag{
+  display:inline-block;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.hero-title{
+  font-size:clamp(32px,7vw,54px);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-1px;
+  margin-bottom:6px;
+}
+
+.hero-title .red{color:var(--red2);}
+.hero-title .blue{color:var(--blue2);}
+
+.hero-sub{
+  font-size:14px;
+  color:var(--muted);
+  font-weight:400;
+  line-height:1.7;
+  max-width:480px;
+  margin-top:16px;
+}
+
+/* ── PROGRESS ── */
+.progress{
+  margin-bottom:36px;
+}
+
+.progress-meta{
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:var(--muted2);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.bar{
+  height:2px;
+  background:var(--border);
+  border-radius:2px;
+  overflow:hidden;
+}
+
+.bar-fill{
+  height:2px;
+  background:linear-gradient(90deg,var(--red),var(--blue));
+  border-radius:2px;
+  transition:width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── CARD ── */
+.card{
+  background: transparent;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:36px 32px;
+  animation:fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(12px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.step{display:none;}
+.step.active{display:block;}
+
+/* ── STEP HEADER ── */
+.step-num{
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted2);
+  margin-bottom:8px;
+}
+
+.step-title{
+  font-size:clamp(22px,4vw,30px);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  margin-bottom:6px;
+  line-height:1.1;
+}
+
+.step-sub{
+  font-size:13px;
+  color:var(--muted);
+  font-weight:400;
+  line-height:1.6;
+  margin-bottom:32px;
+}
+
+.sep{height:1px;background:var(--border);margin:24px 0;}
+
+/* ── FIELDS ── */
+.field{margin-bottom:24px;}
+
+.field-label{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+.req{color:var(--red2);}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea{
+  width:100%;
+  background: rgba(10,10,15,0.85);
+  border:1px solid var(--border);
+  border-radius:8px;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  font-weight:400;
+  padding:13px 16px;
+  outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+input:focus,select:focus,textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(26,111,255,0.12);
+}
+
+input::placeholder,textarea::placeholder{color:var(--muted2);font-weight:400;}
+
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:36px;
+  cursor:pointer;
+}
+
+select option{background:#12121a;}
+textarea{resize:none;height:72px;line-height:1.6;}
+
+.err-msg{font-size:11px;color:var(--red2);margin-top:6px;display:none;}
+.err-msg.show{display:block;}
+
+/* ── OPTIONS ── */
+.opts{display:flex;flex-direction:column;gap:8px;}
+.opts.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+
+.opt{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  background: rgba(10,10,15,0.85);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px 16px;
+  cursor:pointer;
+  transition:border-color 0.2s,background 0.2s;
+  user-select:none;
+}
+
+.opt:hover{border-color:#2e2e44; background: #111118;}
+
+.opt.selected{
+  border-color:var(--blue);
+  background: #0a0e1a;
+}
+
+.opt-dot{
+  width:16px;height:16px;
+  border:1.5px solid var(--muted2);
+  border-radius:50%;
+  flex-shrink:0;
+  margin-top:2px;
+  transition:all 0.15s;
+  position:relative;
+}
+
+.opt.selected .opt-dot{
+  border-color:var(--blue2);
+  background:var(--blue);
+}
+
+.opt.selected .opt-dot::after{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:6px;height:6px;
+  background:#fff;
+  border-radius:50%;
+}
+
+.opt-label{font-size:13px;font-weight:500;color:var(--white);line-height:1.3;}
+.opt-desc{font-size:11px;color:var(--muted);margin-top:3px;font-weight:400;}
+
+/* ── INVEST BOX ── */
+.invest-box{
+  background: #0d0d0d;
+  border:1px solid rgba(26,111,255,0.25);
+  border-radius:10px;
+  padding:20px 22px;
+  margin-bottom:28px;
+}
+
+.invest-tag{
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--blue2);
+  margin-bottom:8px;
+}
+
+.invest-value{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-1px;
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.invest-value span{color:var(--red2);}
+
+.invest-text{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ── NAV ── */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:32px;
+}
+
+.btn-back{
+  background:none;
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:13px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:border-color 0.2s,color 0.2s;
+  flex-shrink:0;
+}
+
+.btn-back:hover{border-color:#333;color:#fff;}
+
+.btn-next{
+  flex:1;
+  background:linear-gradient(90deg,var(--red),var(--blue));
+  color:#fff;
+  border:none;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:15px 24px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:opacity 0.2s,transform 0.1s;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn-next::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,0.08),transparent);
+  pointer-events:none;
+}
+
+.btn-next:hover{opacity:0.9;}
+.btn-next:active{transform:scale(0.99);}
+
+/* ── SUCCESS ── */
+.success{display:none;animation:fadeUp 0.4s ease both;}
+.success.show{display:block;}
+
+.success-card{
+  background: transparent;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:48px 32px;
+  text-align:center;
+  margin-top:24px;
+}
+
+.success-icon{
+  width:64px;height:64px;
+  background:linear-gradient(135deg,var(--red),var(--blue));
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;
+  margin:0 auto 24px;
+}
+
+.success-title{
+  font-size:36px;
+  font-weight:900;
+  letter-spacing:-1px;
+  margin-bottom:12px;
+  line-height:1;
+}
+
+.success-title .red{color:var(--red2);}
+.success-title .blue{color:var(--blue2);}
+
+.success-sub{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.7;
+  max-width:360px;
+  margin:0 auto 32px;
+}
+
+.steps-list{
+  text-align:left;
+  border-top:1px solid var(--border);
+}
+
+.s-item{
+  display:flex;
+  gap:16px;
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+  align-items:center;
+}
+
+.s-dot{
+  width:8px;height:8px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--red),var(--blue));
+  flex-shrink:0;
+}
+
+.s-text{font-size:13px;color:var(--muted);font-weight:400;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;
+  font-size:11px;
+  color:var(--muted2);
+  margin-top:24px;
+  letter-spacing:0.5px;
+}
+
+@media(max-width:480px){
+  .card{padding:24px 20px;}
+  .opts.grid2{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
 
 <!-- CANVAS ONDAS -->
-<canvas id=3D"waveCanvas" style=3D"position:fixed;top:0;left:0;width:100%;h=
-eight:100%;z-index:0;pointer-events:none;" width=3D"1920" height=3D"919"></=
-canvas>
+<canvas id="waveCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
 
+<script>
+(function(){
+  const canvas = document.getElementById('waveCanvas');
+  const ctx = canvas.getContext('2d');
 
+  function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-<div class=3D"page">
+  const waves = [
+    { y: 0.10, amp: 120, freq: 0.0018, speed:  0.00015, phase: 0.0, r:200, g:10, b:10  },
+    { y: 0.28, amp: 100, freq: 0.0015, speed:  0.00012, phase: 2.1, r:10,  g:40, b:220 },
+    { y: 0.48, amp: 130, freq: 0.0020, speed:  0.00018, phase: 4.3, r:180, g:8,  b:8   },
+    { y: 0.68, amp: 110, freq: 0.0016, speed:  0.00013, phase: 1.5, r:10,  g:50, b:220 },
+    { y: 0.30, amp: 115, freq: 0.0017, speed: -0.00014, phase: 1.0, r:190, g:10, b:10  },
+    { y: 0.75, amp: 105, freq: 0.0019, speed: -0.00011, phase: 3.5, r:10,  g:35, b:210 },
+  ];
+
+  function getY(w, x, t){
+    return canvas.height * w.y
+      + Math.sin(x * w.freq + t * w.speed * 1000 + w.phase) * w.amp
+      + Math.sin(x * w.freq * 1.7 + t * w.speed * 800 + w.phase + 1) * w.amp * 0.3;
+  }
+
+  function drawBand(w, t){
+    const W = canvas.width;
+    ctx.beginPath();
+    for(let x = 0; x <= W; x += 2){
+      const y = getY(w, x, t);
+      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = `rgb(${w.r},${w.g},${w.b})`;
+    ctx.lineWidth = 1.2;
+    ctx.shadowBlur = 0;
+    ctx.stroke();
+  }
+
+  let last = null;
+  let elapsed = 0;
+
+  function loop(ts){
+    if(!last) last = ts;
+    elapsed += (ts - last) * 0.001;
+    last = ts;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    waves.forEach(w => drawBand(w, elapsed));
+
+    requestAnimationFrame(loop);
+  }
+
+  requestAnimationFrame(loop);
+})();
+</script>
+
+<div class="page">
 
   <!-- HEADER -->
-  <div class=3D"header">
+  <div class="header">
     <div>
-      <div class=3D"logo-text">NEXTRA</div>
-      <div class=3D"logo-sub">Sua marca no pr=C3=B3ximo n=C3=ADvel</div>
+      <div class="logo-text">NEXTRA</div>
+      <div class="logo-sub">Sua marca no próximo nível</div>
     </div>
   </div>
 
   <!-- HERO -->
-  <div class=3D"hero">
-    <div class=3D"hero-tag">An=C3=A1lise gratuita para cl=C3=ADnicas</div>
-    <div class=3D"hero-title">
-      Sua cl=C3=ADnica<br>
+  <div class="hero">
+    <div class="hero-tag">Análise gratuita para clínicas</div>
+    <div class="hero-title">
+      Sua clínica<br>
       LOTANDO DE<br>
-      <span class=3D"red">PACI</span><span class=3D"blue">ENTES.</span>
+      <span class="red">PACI</span><span class="blue">ENTES.</span>
     </div>
-    <div class=3D"hero-sub">
-      Preencha as informa=C3=A7=C3=B5es abaixo e receba uma estrat=C3=A9gia=
- personalizada para atrair mais pacientes todo m=C3=AAs =E2=80=94 sem depen=
-der de indica=C3=A7=C3=A3o.
+    <div class="hero-sub">
+      Preencha as informações abaixo e receba uma estratégia personalizada para atrair mais pacientes todo mês — sem depender de indicação.
     </div>
   </div>
 
   <!-- PROGRESS -->
-  <div class=3D"progress" id=3D"progressBar">
-    <div class=3D"progress-meta">
-      <span id=3D"stepLabel">ETAPA 01 =E2=80=94 IDENTIFICA=C3=87=C3=83O</sp=
-an>
-      <span id=3D"pctLabel">0%</span>
+  <div class="progress" id="progressBar">
+    <div class="progress-meta">
+      <span id="stepLabel">ETAPA 01 — IDENTIFICAÇÃO</span>
+      <span id="pctLabel">0%</span>
     </div>
-    <div class=3D"bar"><div class=3D"bar-fill" id=3D"barFill" style=3D"widt=
-h:0%"></div></div>
+    <div class="bar"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
   </div>
 
   <!-- CARD -->
-  <div class=3D"card">
+  <div class="card">
 
     <!-- STEP 1 -->
-    <div class=3D"step active" id=3D"step1">
-      <div class=3D"step-num">01 =E2=80=94 Identifica=C3=A7=C3=A3o</div>
-      <div class=3D"step-title">Sobre a sua cl=C3=ADnica</div>
-      <div class=3D"step-sub">Vamos come=C3=A7ar pelo b=C3=A1sico. Essas in=
-forma=C3=A7=C3=B5es s=C3=A3o a base de tudo que a NEXTRA vai construir pra =
-voc=C3=AA.</div>
+    <div class="step active" id="step1">
+      <div class="step-num">01 — Identificação</div>
+      <div class="step-title">Sobre a sua clínica</div>
+      <div class="step-sub">Vamos começar pelo básico. Essas informações são a base de tudo que a NEXTRA vai construir pra você.</div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Nome completo <span class=3D"req">*</spa=
-n></div>
-        <input type=3D"text" id=3D"nome" placeholder=3D"Ex: Dr. Jo=C3=A3o M=
-endes">
-        <div class=3D"err-msg" id=3D"e-nome">Informe seu nome</div>
+      <div class="field">
+        <div class="field-label">Nome completo <span class="req">*</span></div>
+        <input type="text" id="nome" placeholder="Ex: Dr. João Mendes">
+        <div class="err-msg" id="e-nome">Informe seu nome</div>
       </div>
-      <div class=3D"field">
-        <div class=3D"field-label">Nome da cl=C3=ADnica / consult=C3=B3rio =
-<span class=3D"req">*</span></div>
-        <input type=3D"text" id=3D"clinica" placeholder=3D"Ex: Cl=C3=ADnica=
- Vida Plena">
-        <div class=3D"err-msg" id=3D"e-clinica">Informe o nome da cl=C3=ADn=
-ica</div>
+      <div class="field">
+        <div class="field-label">Nome da clínica / consultório <span class="req">*</span></div>
+        <input type="text" id="clinica" placeholder="Ex: Clínica Vida Plena">
+        <div class="err-msg" id="e-clinica">Informe o nome da clínica</div>
       </div>
-      <div class=3D"field">
-        <div class=3D"field-label">Especialidade <span class=3D"req">*</spa=
-n></div>
-        <select id=3D"especialidade">
-          <option value=3D"">Selecione...</option>
+      <div class="field">
+        <div class="field-label">Especialidade <span class="req">*</span></div>
+        <select id="especialidade">
+          <option value="">Selecione...</option>
           <option>Odontologia</option>
-          <option>Est=C3=A9tica / Dermatologia</option>
+          <option>Estética / Dermatologia</option>
           <option>Fisioterapia</option>
           <option>Psicologia / Psiquiatria</option>
-          <option>Nutri=C3=A7=C3=A3o</option>
+          <option>Nutrição</option>
           <option>Medicina geral</option>
           <option>Outra especialidade</option>
         </select>
-        <div class=3D"err-msg" id=3D"e-esp">Selecione a especialidade</div>
+        <div class="err-msg" id="e-esp">Selecione a especialidade</div>
       </div>
-      <div class=3D"field">
-        <div class=3D"field-label">WhatsApp <span class=3D"req">*</span></d=
-iv>
-        <input type=3D"tel" id=3D"whats" placeholder=3D"(00) 00000-0000">
-        <div class=3D"err-msg" id=3D"e-whats">Informe seu WhatsApp</div>
+      <div class="field">
+        <div class="field-label">WhatsApp <span class="req">*</span></div>
+        <input type="tel" id="whats" placeholder="(00) 00000-0000">
+        <div class="err-msg" id="e-whats">Informe seu WhatsApp</div>
       </div>
-      <div class=3D"field">
-        <div class=3D"field-label">Cidade / Estado <span class=3D"req">*</s=
-pan></div>
-        <input type=3D"text" id=3D"cidade" placeholder=3D"Ex: S=C3=A3o Paul=
-o =E2=80=93 SP">
-        <div class=3D"err-msg" id=3D"e-cidade">Informe sua cidade</div>
+      <div class="field">
+        <div class="field-label">Cidade / Estado <span class="req">*</span></div>
+        <input type="text" id="cidade" placeholder="Ex: São Paulo – SP">
+        <div class="err-msg" id="e-cidade">Informe sua cidade</div>
       </div>
 
-      <div class=3D"nav">
-        <button class=3D"btn-next">Pr=C3=B3xima etapa =E2=86=92</button>
+      <div class="nav">
+        <button class="btn-next" onclick="next(2)">Próxima etapa →</button>
       </div>
     </div>
 
     <!-- STEP 2 -->
-    <div class=3D"step" id=3D"step2">
-      <div class=3D"step-num">02 =E2=80=94 Situa=C3=A7=C3=A3o atual</div>
-      <div class=3D"step-title">Como est=C3=A1 hoje</div>
-      <div class=3D"step-sub">Precisamos entender onde voc=C3=AA est=C3=A1 =
-pra saber aonde te levar.</div>
+    <div class="step" id="step2">
+      <div class="step-num">02 — Situação atual</div>
+      <div class="step-title">Como está hoje</div>
+      <div class="step-sub">Precisamos entender onde você está pra saber aonde te levar.</div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Pacientes novos por m=C3=AAs hoje</div>
-        <div class=3D"opts" id=3D"pacientes">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Menos de 5</div><div class=3D"opt-desc">Muito abaixo do espe=
-rado</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">5 a 15</div><div class=3D"opt-desc">Quero crescer mais</div>=
-</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">15 a 30</div><div class=3D"opt-desc">Razo=C3=A1vel, quero es=
-calar</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Mais de 30</div><div class=3D"opt-desc">Cheio =E2=80=94 quer=
-o otimizar</div></div></div>
+      <div class="field">
+        <div class="field-label">Pacientes novos por mês hoje</div>
+        <div class="opts" id="pacientes">
+          <div class="opt" onclick="pick(this,'pacientes')"><div class="opt-dot"></div><div><div class="opt-label">Menos de 5</div><div class="opt-desc">Muito abaixo do esperado</div></div></div>
+          <div class="opt" onclick="pick(this,'pacientes')"><div class="opt-dot"></div><div><div class="opt-label">5 a 15</div><div class="opt-desc">Quero crescer mais</div></div></div>
+          <div class="opt" onclick="pick(this,'pacientes')"><div class="opt-dot"></div><div><div class="opt-label">15 a 30</div><div class="opt-desc">Razoável, quero escalar</div></div></div>
+          <div class="opt" onclick="pick(this,'pacientes')"><div class="opt-dot"></div><div><div class="opt-label">Mais de 30</div><div class="opt-desc">Cheio — quero otimizar</div></div></div>
         </div>
       </div>
 
-      <div class=3D"sep"></div>
+      <div class="sep"></div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">J=C3=A1 investiu em tr=C3=A1fego pago?</=
-div>
-        <div class=3D"opts" id=3D"trafego">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Nunca rodei</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Tentei, n=C3=A3o funcionou</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Rodei com bons resultados</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Ainda estou rodando</div></div>
+      <div class="field">
+        <div class="field-label">Já investiu em tráfego pago?</div>
+        <div class="opts" id="trafego">
+          <div class="opt" onclick="pick(this,'trafego')"><div class="opt-dot"></div><div class="opt-label">Nunca rodei</div></div>
+          <div class="opt" onclick="pick(this,'trafego')"><div class="opt-dot"></div><div class="opt-label">Tentei, não funcionou</div></div>
+          <div class="opt" onclick="pick(this,'trafego')"><div class="opt-dot"></div><div class="opt-label">Rodei com bons resultados</div></div>
+          <div class="opt" onclick="pick(this,'trafego')"><div class="opt-dot"></div><div class="opt-label">Ainda estou rodando</div></div>
         </div>
       </div>
 
-      <div class=3D"sep"></div>
+      <div class="sep"></div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Como seus pacientes te encontram hoje</d=
-iv>
-        <div class=3D"opts grid2" id=3D"origem">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Indica=C3=A7=C3=A3o</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Instagram / Facebook</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Google</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Localiza=C3=A7=C3=A3o f=C3=ADsica</div></div>
+      <div class="field">
+        <div class="field-label">Como seus pacientes te encontram hoje</div>
+        <div class="opts grid2" id="origem">
+          <div class="opt" onclick="tog(this,'origem')"><div class="opt-dot"></div><div class="opt-label">Indicação</div></div>
+          <div class="opt" onclick="tog(this,'origem')"><div class="opt-dot"></div><div class="opt-label">Instagram / Facebook</div></div>
+          <div class="opt" onclick="tog(this,'origem')"><div class="opt-dot"></div><div class="opt-label">Google</div></div>
+          <div class="opt" onclick="tog(this,'origem')"><div class="opt-dot"></div><div class="opt-label">Localização física</div></div>
         </div>
       </div>
 
-      <div class=3D"nav">
-        <button class=3D"btn-back">=E2=86=90 Voltar</button>
-        <button class=3D"btn-next">Pr=C3=B3xima etapa =E2=86=92</button>
+      <div class="nav">
+        <button class="btn-back" onclick="next(1)">← Voltar</button>
+        <button class="btn-next" onclick="next(3)">Próxima etapa →</button>
       </div>
     </div>
 
     <!-- STEP 3 -->
-    <div class=3D"step" id=3D"step3">
-      <div class=3D"step-num">03 =E2=80=94 Investimento</div>
-      <div class=3D"step-title">Sobre o investimento</div>
-      <div class=3D"step-sub">Essas informa=C3=A7=C3=B5es s=C3=A3o essencia=
-is para entendermos se conseguimos te atender da forma certa.</div>
+    <div class="step" id="step3">
+      <div class="step-num">03 — Investimento</div>
+      <div class="step-title">Sobre o investimento</div>
+      <div class="step-sub">Essas informações são essenciais para entendermos se conseguimos te atender da forma certa.</div>
 
-      <div class=3D"invest-box">
-        <div class=3D"invest-tag">Transpar=C3=AAncia total</div>
-        <div class=3D"invest-value"><span>R$ 1.500</span> / m=C3=AAs</div>
-        <div class=3D"invest-text">Esse =C3=A9 o investimento m=C3=ADnimo p=
-ara trabalhar com a NEXTRA. Inclui estrat=C3=A9gia, gest=C3=A3o completa do=
-s an=C3=BAncios e acompanhamento de resultado. Seja honesto =E2=80=94 isso =
-nos ajuda a montar a solu=C3=A7=C3=A3o certa pra voc=C3=AA.</div>
+      <div class="invest-box">
+        <div class="invest-tag">Transparência total</div>
+        <div class="invest-value"><span>R$ 1.500</span> / mês</div>
+        <div class="invest-text">Esse é o investimento mínimo para trabalhar com a NEXTRA. Inclui estratégia, gestão completa dos anúncios e acompanhamento de resultado. Seja honesto — isso nos ajuda a montar a solução certa pra você.</div>
       </div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Faturamento m=C3=A9dio mensal da cl=C3=
-=ADnica <span class=3D"req">*</span></div>
-        <div class=3D"opts" id=3D"faturamento">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Abaixo de R$ 10.000</div><div class=3D"opt-desc">Em fase de =
-crescimento</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">R$ 10.000 a R$ 30.000</div><div class=3D"opt-desc">Estrutura=
-do, buscando escalar</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">R$ 30.000 a R$ 80.000</div><div class=3D"opt-desc">Crescendo=
-, quero acelerar</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Acima de R$ 80.000</div><div class=3D"opt-desc">Consolidado =
-=E2=80=94 foco em ROI</div></div></div>
+      <div class="field">
+        <div class="field-label">Faturamento médio mensal da clínica <span class="req">*</span></div>
+        <div class="opts" id="faturamento">
+          <div class="opt" onclick="pick(this,'faturamento')"><div class="opt-dot"></div><div><div class="opt-label">Abaixo de R$ 10.000</div><div class="opt-desc">Em fase de crescimento</div></div></div>
+          <div class="opt" onclick="pick(this,'faturamento')"><div class="opt-dot"></div><div><div class="opt-label">R$ 10.000 a R$ 30.000</div><div class="opt-desc">Estruturado, buscando escalar</div></div></div>
+          <div class="opt" onclick="pick(this,'faturamento')"><div class="opt-dot"></div><div><div class="opt-label">R$ 30.000 a R$ 80.000</div><div class="opt-desc">Crescendo, quero acelerar</div></div></div>
+          <div class="opt" onclick="pick(this,'faturamento')"><div class="opt-dot"></div><div><div class="opt-label">Acima de R$ 80.000</div><div class="opt-desc">Consolidado — foco em ROI</div></div></div>
         </div>
-        <div class=3D"err-msg" id=3D"e-fat">Selecione uma op=C3=A7=C3=A3o</=
-div>
+        <div class="err-msg" id="e-fat">Selecione uma opção</div>
       </div>
 
-      <div class=3D"sep"></div>
+      <div class="sep"></div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Consegue investir R$ 1.500/m=C3=AAs na N=
-EXTRA? <span class=3D"req">*</span></div>
-        <div class=3D"opts" id=3D"investe">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Sim, consigo investir agora</div><div class=3D"opt-desc">Que=
-ro come=C3=A7ar logo</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Precisaria de mais detalhes</div><div class=3D"opt-desc">Que=
-ro entender o retorno antes</div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">N=C3=A3o agora, mas em breve</div><div class=3D"opt-desc">Pl=
-anejo investir nos pr=C3=B3ximos meses</div></div></div>
+      <div class="field">
+        <div class="field-label">Consegue investir R$ 1.500/mês na NEXTRA? <span class="req">*</span></div>
+        <div class="opts" id="investe">
+          <div class="opt" onclick="pick(this,'investe')"><div class="opt-dot"></div><div><div class="opt-label">Sim, consigo investir agora</div><div class="opt-desc">Quero começar logo</div></div></div>
+          <div class="opt" onclick="pick(this,'investe')"><div class="opt-dot"></div><div><div class="opt-label">Precisaria de mais detalhes</div><div class="opt-desc">Quero entender o retorno antes</div></div></div>
+          <div class="opt" onclick="pick(this,'investe')"><div class="opt-dot"></div><div><div class="opt-label">Não agora, mas em breve</div><div class="opt-desc">Planejo investir nos próximos meses</div></div></div>
         </div>
-        <div class=3D"err-msg" id=3D"e-inv">Selecione uma op=C3=A7=C3=A3o</=
-div>
+        <div class="err-msg" id="e-inv">Selecione uma opção</div>
       </div>
 
-      <div class=3D"nav">
-        <button class=3D"btn-back">=E2=86=90 Voltar</button>
-        <button class=3D"btn-next">Pr=C3=B3xima etapa =E2=86=92</button>
+      <div class="nav">
+        <button class="btn-back" onclick="next(2)">← Voltar</button>
+        <button class="btn-next" onclick="next(4)">Próxima etapa →</button>
       </div>
     </div>
 
     <!-- STEP 4 -->
-    <div class=3D"step" id=3D"step4">
-      <div class=3D"step-num">04 =E2=80=94 Objetivo</div>
-      <div class=3D"step-title">O que voc=C3=AA quer</div>
-      <div class=3D"step-sub">=C3=9Altima etapa. Quanto mais detalhe aqui, =
-mais cir=C3=BArgica vai ser a estrat=C3=A9gia da NEXTRA.</div>
+    <div class="step" id="step4">
+      <div class="step-num">04 — Objetivo</div>
+      <div class="step-title">O que você quer</div>
+      <div class="step-sub">Última etapa. Quanto mais detalhe aqui, mais cirúrgica vai ser a estratégia da NEXTRA.</div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Qual =C3=A9 sua meta principal? <span cl=
-ass=3D"req">*</span></div>
-        <div class=3D"opts" id=3D"meta">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Lotar minha agenda de consultas</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Aumentar o faturamento mensal</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Me tornar refer=C3=AAncia na minha cidade</div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div class=3D"opt=
--label">Parar de depender de indica=C3=A7=C3=A3o</div></div>
+      <div class="field">
+        <div class="field-label">Qual é sua meta principal? <span class="req">*</span></div>
+        <div class="opts" id="meta">
+          <div class="opt" onclick="pick(this,'meta')"><div class="opt-dot"></div><div class="opt-label">Lotar minha agenda de consultas</div></div>
+          <div class="opt" onclick="pick(this,'meta')"><div class="opt-dot"></div><div class="opt-label">Aumentar o faturamento mensal</div></div>
+          <div class="opt" onclick="pick(this,'meta')"><div class="opt-dot"></div><div class="opt-label">Me tornar referência na minha cidade</div></div>
+          <div class="opt" onclick="pick(this,'meta')"><div class="opt-dot"></div><div class="opt-label">Parar de depender de indicação</div></div>
         </div>
-        <div class=3D"err-msg" id=3D"e-meta">Selecione uma op=C3=A7=C3=A3o<=
-/div>
+        <div class="err-msg" id="e-meta">Selecione uma opção</div>
       </div>
 
-      <div class=3D"sep"></div>
+      <div class="sep"></div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Em quanto tempo espera ver resultado?</d=
-iv>
-        <div class=3D"opts grid2" id=3D"prazo">
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Imediato</div><div class=3D"opt-desc">Preciso agora</div></d=
-iv></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">1 m=C3=AAs</div><div class=3D"opt-desc">R=C3=A1pido</div></d=
-iv></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">2=E2=80=933 meses</div><div class=3D"opt-desc">Consistente</=
-div></div></div>
-          <div class=3D"opt"><div class=3D"opt-dot"></div><div><div class=
-=3D"opt-label">Longo prazo</div><div class=3D"opt-desc">Constru=C3=A7=C3=A3=
-o s=C3=B3lida</div></div></div>
+      <div class="field">
+        <div class="field-label">Em quanto tempo espera ver resultado?</div>
+        <div class="opts grid2" id="prazo">
+          <div class="opt" onclick="pick(this,'prazo')"><div class="opt-dot"></div><div><div class="opt-label">Imediato</div><div class="opt-desc">Preciso agora</div></div></div>
+          <div class="opt" onclick="pick(this,'prazo')"><div class="opt-dot"></div><div><div class="opt-label">1 mês</div><div class="opt-desc">Rápido</div></div></div>
+          <div class="opt" onclick="pick(this,'prazo')"><div class="opt-dot"></div><div><div class="opt-label">2–3 meses</div><div class="opt-desc">Consistente</div></div></div>
+          <div class="opt" onclick="pick(this,'prazo')"><div class="opt-dot"></div><div><div class="opt-label">Longo prazo</div><div class="opt-desc">Construção sólida</div></div></div>
         </div>
       </div>
 
-      <div class=3D"sep"></div>
+      <div class="sep"></div>
 
-      <div class=3D"field">
-        <div class=3D"field-label">Tem algo importante que a NEXTRA precisa=
- saber?</div>
-        <textarea id=3D"obs" placeholder=3D"Opcional =E2=80=94 desafios, co=
-ntexto, d=C3=BAvidas..."></textarea>
+      <div class="field">
+        <div class="field-label">Tem algo importante que a NEXTRA precisa saber?</div>
+        <textarea id="obs" placeholder="Opcional — desafios, contexto, dúvidas..."></textarea>
       </div>
 
-      <div class=3D"nav">
-        <button class=3D"btn-back">=E2=86=90 Voltar</button>
-        <button class=3D"btn-next">Enviar briefing =E2=9C=A6</button>
+      <div class="nav">
+        <button class="btn-back" onclick="next(3)">← Voltar</button>
+        <button class="btn-next" onclick="submit()">Enviar briefing ✦</button>
       </div>
     </div>
 
   </div><!-- /card -->
 
   <!-- SUCCESS -->
-  <div class=3D"success" id=3D"success">
-    <div class=3D"success-card">
-      <div class=3D"success-icon">=E2=9C=A6</div>
-      <div class=3D"success-title"><span class=3D"red">Briefing</span><br><=
-span class=3D"blue">enviado.</span></div>
-      <div class=3D"success-sub">A NEXTRA recebeu todas as informa=C3=A7=C3=
-=B5es e vai entrar em contato pelo WhatsApp em at=C3=A9 24h com uma an=C3=
-=A1lise personalizada.</div>
-      <div class=3D"steps-list">
-        <div class=3D"s-item"><div class=3D"s-dot"></div><div class=3D"s-te=
-xt">Analisamos seu perfil e situa=C3=A7=C3=A3o atual</div></div>
-        <div class=3D"s-item"><div class=3D"s-dot"></div><div class=3D"s-te=
-xt">Entramos em contato pelo WhatsApp</div></div>
-        <div class=3D"s-item"><div class=3D"s-dot"></div><div class=3D"s-te=
-xt">Apresentamos uma estrat=C3=A9gia personalizada</div></div>
-        <div class=3D"s-item"><div class=3D"s-dot"></div><div class=3D"s-te=
-xt">Voc=C3=AA decide se quer come=C3=A7ar</div></div>
+  <div class="success" id="success">
+    <div class="success-card">
+      <div class="success-icon">✦</div>
+      <div class="success-title"><span class="red">Briefing</span><br><span class="blue">enviado.</span></div>
+      <div class="success-sub">A NEXTRA recebeu todas as informações e vai entrar em contato pelo WhatsApp em até 24h com uma análise personalizada.</div>
+      <div class="steps-list">
+        <div class="s-item"><div class="s-dot"></div><div class="s-text">Analisamos seu perfil e situação atual</div></div>
+        <div class="s-item"><div class="s-dot"></div><div class="s-text">Entramos em contato pelo WhatsApp</div></div>
+        <div class="s-item"><div class="s-dot"></div><div class="s-text">Apresentamos uma estratégia personalizada</div></div>
+        <div class="s-item"><div class="s-dot"></div><div class="s-text">Você decide se quer começar</div></div>
       </div>
     </div>
   </div>
 
-  <div class=3D"footer" id=3D"footer">=C2=A9 2026 Nextra. Todos os direitos=
- reservados.</div>
+  <div class="footer" id="footer">© 2026 Nextra. Todos os direitos reservados.</div>
 
 </div><!-- /page -->
 
-
-
-
-</body></html>
-------MultipartBoundary--yiwwwhhZIFLPDcJwaHWPMCH98rMqOFOVAOIx97Pfj7----
-Content-Type: text/css
-Content-Transfer-Encoding: quoted-printable
-Content-Location: https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap
-
-@charset "utf-8";
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 300; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 400; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 500; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 600; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 700; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2") format("woff2"); unicode-range: U+460-=
-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2") format("woff2"); unicode-range: U+301,=
- U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2") format("woff2"); unicode-range: U+1F00=
--1FFF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2") format("woff2"); unicode-range: U+370-=
-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2") format("woff2"); unicode-range: U+102-=
-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+30=
-3-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa25L7SUc.woff2") format("woff2"); unicode-range: U+100-=
-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D0=
-0-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,=
- U+2C60-2C7F, U+A720-A7FF; }
-
-@font-face { font-family: Inter; font-style: normal; font-weight: 900; font=
--display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3i=
-LTeHuS_nVMrMxCp50SjIa1ZL7.woff2") format("woff2"); unicode-range: U+0-FF, U=
-+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+200=
-0-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-------MultipartBoundary--yiwwwhhZIFLPDcJwaHWPMCH98rMqOFOVAOIx97Pfj7----
-Content-Type: text/css
-Content-Transfer-Encoding: quoted-printable
-Content-Location: cid:css-1f3c5096-0272-45d4-ae05-ef3014b602f5@mhtml.blink
-
-@charset "utf-8";
-
-@import url("https://fonts.googleapis.com/css2?family=3DInter:wght@300;400;=
-500;600;700;900&display=3Dswap");
-
-*, ::before, ::after { box-sizing: border-box; margin: 0px; padding: 0px; }
-
-:root { --bg: #0a0a0f; --surface: #12121a; --surface2: #1a1a26; --border: #=
-1e1e2e; --red: #e02020; --red2: #ff3333; --blue: #1a6fff; --blue2: #4d9fff;=
- --white: #f0f0f0; --muted: #888; --muted2: #555; }
-
-html { scroll-behavior: smooth; }
-
-body { background: var(--bg); color: var(--white); font-family: Inter, sans=
--serif; min-height: 100vh; position: relative; overflow-x: hidden; }
-
-.page { position: relative; z-index: 1; max-width: 680px; margin: 0px auto;=
- padding: 0px 20px 80px; }
-
-.header { padding: 40px 0px 0px; display: flex; align-items: center; gap: 1=
-2px; }
-
-.logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg,=
-var(--red),var(--blue)); border-radius: 8px; display: flex; align-items: ce=
-nter; justify-content: center; font-size: 18px; font-weight: 900; color: rg=
-b(255, 255, 255); flex-shrink: 0; }
-
-.logo-text { font-size: 20px; font-weight: 800; letter-spacing: 1px; color:=
- rgb(255, 255, 255); }
-
-.logo-sub { font-size: 9px; color: var(--muted2); letter-spacing: 2px; text=
--transform: uppercase; margin-top: 1px; }
-
-.hero { padding: 52px 0px 40px; }
-
-.hero-tag { display: inline-block; font-size: 11px; font-weight: 600; lette=
-r-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bott=
-om: 16px; }
-
-.hero-title { font-size: clamp(32px, 7vw, 54px); font-weight: 900; line-hei=
-ght: 1; letter-spacing: -1px; margin-bottom: 6px; }
-
-.hero-title .red { color: var(--red2); }
-
-.hero-title .blue { color: var(--blue2); }
-
-.hero-sub { font-size: 14px; color: var(--muted); font-weight: 400; line-he=
-ight: 1.7; max-width: 480px; margin-top: 16px; }
-
-.progress { margin-bottom: 36px; }
-
-.progress-meta { display: flex; justify-content: space-between; font-size: =
-11px; color: var(--muted2); letter-spacing: 1px; text-transform: uppercase;=
- margin-bottom: 10px; }
-
-.bar { height: 2px; background: var(--border); border-radius: 2px; overflow=
-: hidden; }
-
-.bar-fill { height: 2px; background: linear-gradient(90deg,var(--red),var(-=
--blue)); border-radius: 2px; transition: width 0.5s cubic-bezier(0.4, 0, 0.=
-2, 1); }
-
-.card { background: transparent; border: 1px solid var(--border); border-ra=
-dius: 12px; padding: 36px 32px; animation: 0.35s ease 0s 1 normal both runn=
-ing fadeUp; }
-
-@keyframes fadeUp {=20
-  0% { opacity: 0; transform: translateY(12px); }
-  100% { opacity: 1; transform: translateY(0px); }
+<script>
+const LABELS=['ETAPA 01 — IDENTIFICAÇÃO','ETAPA 02 — SITUAÇÃO ATUAL','ETAPA 03 — INVESTIMENTO','ETAPA 04 — OBJETIVO'];
+let cur=1;
+const store={};
+
+function updateBar(){
+  const pct=Math.round(((cur-1)/4)*100);
+  document.getElementById('barFill').style.width=pct+'%';
+  document.getElementById('stepLabel').textContent=LABELS[cur-1];
+  document.getElementById('pctLabel').textContent=pct+'%';
 }
 
-.step { display: none; }
-
-.step.active { display: block; }
-
-.step-num { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-tr=
-ansform: uppercase; color: var(--muted2); margin-bottom: 8px; }
-
-.step-title { font-size: clamp(22px, 4vw, 30px); font-weight: 800; letter-s=
-pacing: -0.5px; margin-bottom: 6px; line-height: 1.1; }
-
-.step-sub { font-size: 13px; color: var(--muted); font-weight: 400; line-he=
-ight: 1.6; margin-bottom: 32px; }
-
-.sep { height: 1px; background: var(--border); margin: 24px 0px; }
-
-.field { margin-bottom: 24px; }
-
-.field-label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; te=
-xt-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-
-.req { color: var(--red2); }
-
-input[type=3D"text"], input[type=3D"tel"], select, textarea { width: 100%; =
-background: rgba(10, 10, 15, 0.85); border: 1px solid var(--border); border=
--radius: 8px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; fo=
-nt-size: 14px; font-weight: 400; padding: 13px 16px; outline: none; transit=
-ion: border-color 0.2s, box-shadow 0.2s; appearance: none; }
-
-input:focus, select:focus, textarea:focus { border-color: var(--blue); box-=
-shadow: rgba(26, 111, 255, 0.12) 0px 0px 0px 3px; }
-
-input::placeholder, textarea::placeholder { color: var(--muted2); font-weig=
-ht: 400; }
-
-select { background-image: url("data:image/svg+xml,%3Csvg xmlns=3D'http://w=
-ww.w3.org/2000/svg' width=3D'10' height=3D'6'%3E%3Cpath d=3D'M1 1l4 4 4-4' =
-stroke=3D'%23555' stroke-width=3D'1.5' fill=3D'none' stroke-linecap=3D'roun=
-d'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: righ=
-t 14px center; padding-right: 36px; cursor: pointer; }
-
-select option { background: rgb(18, 18, 26); }
-
-textarea { resize: none; height: 72px; line-height: 1.6; }
-
-.err-msg { font-size: 11px; color: var(--red2); margin-top: 6px; display: n=
-one; }
-
-.err-msg.show { display: block; }
-
-.opts { display: flex; flex-direction: column; gap: 8px; }
-
-.opts.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-
-.opt { display: flex; align-items: flex-start; gap: 14px; background: rgba(=
-10, 10, 15, 0.85); border: 1px solid var(--border); border-radius: 8px; pad=
-ding: 14px 16px; cursor: pointer; transition: border-color 0.2s, background=
- 0.2s; user-select: none; }
-
-.opt:hover { border-color: rgb(46, 46, 68); background: rgb(17, 17, 24); }
-
-.opt.selected { border-color: var(--blue); background: rgb(10, 14, 26); }
-
-.opt-dot { width: 16px; height: 16px; border: 1.5px solid var(--muted2); bo=
-rder-radius: 50%; flex-shrink: 0; margin-top: 2px; transition: 0.15s; posit=
-ion: relative; }
-
-.opt.selected .opt-dot { border-color: var(--blue2); background: var(--blue=
-); }
-
-.opt.selected .opt-dot::after { content: ""; position: absolute; top: 50%; =
-left: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; backg=
-round: rgb(255, 255, 255); border-radius: 50%; }
-
-.opt-label { font-size: 13px; font-weight: 500; color: var(--white); line-h=
-eight: 1.3; }
-
-.opt-desc { font-size: 11px; color: var(--muted); margin-top: 3px; font-wei=
-ght: 400; }
-
-.invest-box { background: rgb(13, 13, 13); border: 1px solid rgba(26, 111, =
-255, 0.25); border-radius: 10px; padding: 20px 22px; margin-bottom: 28px; }
-
-.invest-tag { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-=
-transform: uppercase; color: var(--blue2); margin-bottom: 8px; }
-
-.invest-value { font-size: 28px; font-weight: 900; letter-spacing: -1px; co=
-lor: rgb(255, 255, 255); margin-bottom: 8px; }
-
-.invest-value span { color: var(--red2); }
-
-.invest-text { font-size: 12px; color: var(--muted); line-height: 1.7; }
-
-.nav { display: flex; align-items: center; gap: 12px; margin-top: 32px; }
-
-.btn-back { background: none; border: 1px solid var(--border); color: var(-=
--muted); font-family: Inter, sans-serif; font-size: 12px; font-weight: 600;=
- letter-spacing: 1px; text-transform: uppercase; padding: 13px 18px; border=
--radius: 8px; cursor: pointer; transition: border-color 0.2s, color 0.2s; f=
-lex-shrink: 0; }
-
-.btn-back:hover { border-color: rgb(51, 51, 51); color: rgb(255, 255, 255);=
- }
-
-.btn-next { flex: 1 1 0%; background: linear-gradient(90deg,var(--red),var(=
---blue)); color: rgb(255, 255, 255); border: none; font-family: Inter, sans=
--serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-tran=
-sform: uppercase; padding: 15px 24px; border-radius: 8px; cursor: pointer; =
-transition: opacity 0.2s, transform 0.1s; position: relative; overflow: hid=
-den; }
-
-.btn-next::after { content: ""; position: absolute; inset: 0px; background:=
- linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent); pointer-ev=
-ents: none; }
-
-.btn-next:hover { opacity: 0.9; }
-
-.btn-next:active { transform: scale(0.99); }
-
-.success { display: none; animation: 0.4s ease 0s 1 normal both running fad=
-eUp; }
-
-.success.show { display: block; }
-
-.success-card { background: transparent; border: 1px solid var(--border); b=
-order-radius: 12px; padding: 48px 32px; text-align: center; margin-top: 24p=
-x; }
-
-.success-icon { width: 64px; height: 64px; background: linear-gradient(135d=
-eg,var(--red),var(--blue)); border-radius: 50%; display: flex; align-items:=
- center; justify-content: center; font-size: 28px; margin: 0px auto 24px; }
-
-.success-title { font-size: 36px; font-weight: 900; letter-spacing: -1px; m=
-argin-bottom: 12px; line-height: 1; }
-
-.success-title .red { color: var(--red2); }
-
-.success-title .blue { color: var(--blue2); }
-
-.success-sub { font-size: 13px; color: var(--muted); line-height: 1.7; max-=
-width: 360px; margin: 0px auto 32px; }
-
-.steps-list { text-align: left; border-top: 1px solid var(--border); }
-
-.s-item { display: flex; gap: 16px; padding: 16px 0px; border-bottom: 1px s=
-olid var(--border); align-items: center; }
-
-.s-dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gr=
-adient(135deg,var(--red),var(--blue)); flex-shrink: 0; }
-
-.s-text { font-size: 13px; color: var(--muted); font-weight: 400; }
-
-.footer { text-align: center; font-size: 11px; color: var(--muted2); margin=
--top: 24px; letter-spacing: 0.5px; }
-
-@media (max-width: 480px) {
-  .card { padding: 24px 20px; }
-  .opts.grid2 { grid-template-columns: 1fr; }
+function next(n){
+  if(n>cur&&!validate(cur))return;
+  document.getElementById('step'+cur).classList.remove('active');
+  cur=n;
+  document.getElementById('step'+cur).classList.add('active');
+  updateBar();
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-------MultipartBoundary--yiwwwhhZIFLPDcJwaHWPMCH98rMqOFOVAOIx97Pfj7------
+
+function pick(el,g){
+  document.querySelectorAll('#'+g+' .opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  store[g]=el.querySelector('.opt-label').textContent.trim();
+}
+
+function tog(el,g){
+  el.classList.toggle('selected');
+  store[g]=[...document.querySelectorAll('#'+g+' .opt.selected')].map(o=>o.querySelector('.opt-label').textContent.trim()).join(', ');
+}
+
+function v(id){return(document.getElementById(id)?.value||'').trim();}
+function showE(id,s){const e=document.getElementById('e-'+id);if(e)e.classList.toggle('show',s);}
+
+function validate(s){
+  let ok=true;
+  if(s===1){
+    ['nome','clinica','whats','cidade'].forEach(f=>{const bad=!v(f);showE(f,bad);if(bad)ok=false;});
+    const esp=!document.getElementById('especialidade').value;showE('esp',esp);if(esp)ok=false;
+  }
+  if(s===3){
+    if(!store['faturamento']){showE('fat',true);ok=false;}else showE('fat',false);
+    if(!store['investe']){showE('inv',true);ok=false;}else showE('inv',false);
+  }
+  if(s===4){
+    if(!store['meta']){showE('meta',true);ok=false;}else showE('meta',false);
+  }
+  return ok;
+}
+
+function submit(){
+  if(!validate(4))return;
+  store.nome=v('nome');store.clinica=v('clinica');
+  store.especialidade=document.getElementById('especialidade').value;
+  store.whats=v('whats');store.cidade=v('cidade');store.obs=v('obs');
+  document.getElementById('step4').classList.remove('active');
+  document.getElementById('progressBar').style.display='none';
+  document.querySelector('.card').style.display='none';
+  document.querySelector('.hero').style.display='none';
+  document.getElementById('success').classList.add('show');
+  console.log('Lead NEXTRA:',store);
+  // Integre aqui com Make, Zapier ou webhook
+}
+
+updateBar();
+</script>
+</body>
+</html>
